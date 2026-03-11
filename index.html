@@ -1,0 +1,825 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Yash Finance</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Montserrat", sans-serif;
+    }
+
+    body {
+      background: #f5f6f8;
+    }
+
+   /* ===== GLOBAL HEADER STYLES ===== */
+.header {
+    background: #ffffff;
+    padding: 0 8%; 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #e5e5e5;
+    height: 100px; 
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo img {
+    height: 80px; 
+    width: auto;
+    display: block;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.nav a {
+    text-decoration: none;
+    color: #2c4b8c;
+    font-size: 16px;
+    font-weight: 700; 
+    transition: 0.3s;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.nav a:hover {
+    color: #ff7a00;
+}
+
+.nav a.contact-link {
+    background: #f4f6fb;
+    padding: 10px 15px;
+    border-radius: 5px;
+    color: #3b58a4;
+}
+
+/* Mobile Responsive */
+@media (max-width: 900px) {
+    .header {
+        padding: 0 20px;
+        height: 80px;
+    }
+    .nav {
+        gap: 15px;
+    }
+    .nav a {
+        font-size: 14px;
+    }
+    .contact-link {
+        display: none; 
+    }
+}
+  /*hero*/
+/* HERO SECTION */
+.hero {
+  width: 100%;
+  height: 90vh;
+  background: url('index (1).webp') center/cover no-repeat;
+  position: relative;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* DARK OVERLAY */
+.hero-overlay {
+  width: 100%;
+  height: 100%;
+  background: rgba(10, 20, 60, 0.75);
+  display: flex;
+  align-items: center;
+}
+
+/* CONTENT */
+.hero-content {
+  width: 50%;
+  margin-left: 8%;
+  color: #ffffff;
+}
+
+/* HEADING */
+.hero-content h1 {
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
+/* PARAGRAPH */
+.hero-content p {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 35px;
+  max-width: 520px;
+  color: #e4e8f7;
+}
+
+/* BUTTON (Same Blue) */
+.hero-btn {
+  display: inline-block;
+  padding: 14px 28px;
+  background:  #3b58a4;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.offer-btn a:hover {
+  background: orange;
+}
+.hero-btn:hover {
+  background: orange;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
+
+
+.hero {
+    height: 100vh;
+    background: url("index (1).webp") center/cover no-repeat;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;   /* THIS MAKES CONTENT LEFT SIDE */
+    text-align: left;              /* ALIGN TEXT LEFT */
+}
+
+.hero-content {
+    position: relative;
+    color: #fff;
+    max-width: 600px;
+    margin-left: 50px;            /* SPACE FROM LEFT */
+}
+
+.hero h1 {
+    font-size: 52px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    color: #ddd;
+}
+
+.btn {
+    background: #3b58a4;
+    color: #fff;
+    padding: 14px 30px;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 4px;
+    display: inline-block;
+}
+
+.btn:hover {
+    background: orange;
+}
+/*service*/
+ .services {
+  padding: 80px 0;
+  background: #f5f5f5;
+}
+
+.services-grid {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.service-box {
+  width: 260px;
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 40px 25px;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  transition: 0.3s;
+}
+
+.service-box:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 18px 40px rgba(0,0,0,0.12);
+}
+
+/* Icon circle */
+.icon {
+  width: 80px;
+  height: 80px;
+  margin: auto;
+  border-radius: 50%;
+  background: #f1f1f1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.icon i {
+  font-size: 28px;
+  color: #000;
+}
+
+/* Heading */
+.service-box h3 {
+  font-family: 'Montserrat', sans-serif;
+  color: #22418c;
+  font-size: 22px;
+  margin-bottom: 12px;
+}
+
+/* Text */
+.service-box p {
+  font-family: 'Open Sans', sans-serif;
+  color: #22418c;
+  font-size: 15px;
+  line-height: 1.6;
+}
+/*about*/
+.about-section {
+  padding: 90px 0;
+  background: #f4f6fb;
+}
+
+.about-flex {
+  display: flex;
+  align-items: center;
+  gap: 70px;
+}
+
+/* Image */
+.about-img {
+  flex: 1;
+}
+
+.about-img img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+}
+
+/* Content */
+.about-content {
+  flex: 1;
+}
+
+.about-content h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 42px;
+  color: #0b1c64;
+  line-height: 1.3;
+  margin-bottom: 20px;
+}
+
+.about-content p {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  color: #2b2b7c;
+  line-height: 1.8;
+  margin-bottom: 25px;
+}
+
+/* List */
+.about-list {
+  list-style: none;
+}
+
+.about-list li {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 17px;
+  color: #000;
+  margin-bottom: 10px;
+  position: relative;
+  padding-left: 28px;
+}
+
+/* Tick */
+.about-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  color: #000;
+  font-weight: bold;
+}
+/*offer*/
+/* ===== OFFER SECTION ===== */
+
+.offer-section {
+  background: #f4f6fb;
+  padding: 90px 8%;   /* ✅ SIDE PADDING ADDED */
+}
+
+/* Container (keeps content centered) */
+.container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Header */
+.offer-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.offer-left h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 44px;
+  color: #0b1c64;
+}
+
+.offer-right {
+  max-width: 500px;
+}
+
+.offer-right p {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  color: #2b2b7c;
+  line-height: 1.8;
+}
+
+/* Grid */
+.offer-grid {
+  display: flex;
+  gap: 35px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Card */
+.offer-card {
+  width: 320px;
+  background: #fff;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  transition: 0.3s;
+}
+
+.offer-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 18px 40px rgba(0,0,0,0.12);
+}
+
+.offer-card img {
+  width: 100%;
+  height: 210px;
+  object-fit: cover;
+}
+
+/* Content */
+.offer-content {
+  padding: 25px 20px 30px;
+  text-align: center;
+}
+
+.offer-content h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 24px;
+  color: #3b58a4;
+  margin-bottom: 10px;
+}
+
+.offer-content p {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 15px;
+  color: #555;
+  line-height: 1.7;
+}
+
+/* Button */
+.offer-btn {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.offer-btn a {
+  background: #3b58a4;
+  color: #fff;
+  padding: 14px 40px;
+  text-decoration: none;
+  border-radius: 6px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.offer-btn a:hover {
+  background: orange;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .offer-header {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .offer-left h2 {
+    font-size: 30px;
+  }
+}
+/* ===== WHY SECTION ===== */
+
+.why-section {
+  background: #f4f6fb;
+  padding: 90px 8%;   /* ✅ SIDE PADDING ADDED */
+}
+
+/* Flex Layout */
+.why-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+}
+
+/* LEFT */
+.why-left {
+  flex: 1;
+}
+
+.why-left h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 42px;
+  color: #142a6b;
+  margin-bottom: 15px;
+}
+
+.why-left p {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.8;
+  max-width: 600px;
+}
+
+/* RIGHT IMAGE */
+.why-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.why-right img {
+  width: 100%;
+  max-width: 520px;  /* better image size */
+  border-radius: 12px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+}
+
+/* RESPONSIVE */
+@media (max-width: 992px) {
+  .why-flex {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .why-left h2 {
+    font-size: 30px;
+  }
+}
+/*footer*/
+.footer {
+  background: #455fa8;
+  color: #fff;
+  font-family: 'Montserrat', sans-serif; /* Primary */
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 50px 8%;
+}
+
+.footer-col {
+  width: 22%;
+  min-width: 220px;
+}
+
+/* Headings = Primary (Montserrat) */
+.footer-col h2,
+.footer-col h3 {
+  margin-bottom: 18px;
+  font-weight: 600;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Content = Secondary (Open Sans) */
+.footer-col p,
+.footer-col ul li,
+.footer-col ul li a {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.footer-col p {
+  margin: 8px 0;
+  line-height: 1.6;
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-col ul li {
+  margin: 10px 0;
+}
+
+.footer-col ul li a {
+  text-decoration: none;
+  color: #fff;
+  transition: 0.3s;
+}
+
+.footer-col ul li a:hover {
+  color: #ddd;
+  padding-left: 5px;
+}
+
+/* Bottom text = Secondary */
+.footer-bottom {
+  text-align: center;
+  padding: 15px;
+  background: #3d5395;
+  font-size: 14px;
+  border-top: 1px solid rgba(255,255,255,0.2);
+  font-family: 'Open Sans', sans-serif;
+}
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+   <header class="header">
+    <div class="logo">
+        <img src="Yash Finance Logo new.webp" alt="Yash Finance Logo">
+    </div>
+    <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="aboutus.html">About Us</a>
+        <a href="services.html">Services</a>
+        
+       <a href="contact-us.html">Contact Us</a>
+    <a href="tel:+918850429320" class="contact-link">
+      <i class="fa-solid fa-phone" style="margin-right: 8px;"></i>+91 88504 29320
+    </a>
+    </nav>
+</header>
+
+  <!-- HERO -->
+ <section class="hero">
+  <div class="hero-overlay">
+    <div class="hero-content">
+      <h1>Your Direct Path to Smarter Finance</h1>
+      <p>
+        We source, verify, and fast-track your loans through 50+ banking partners for you
+      </p>
+     
+    </div>
+  </div>
+</section>
+  <!--service-->
+ <section class="services">
+  <div class="container">
+    <div class="services-grid">
+
+      <div class="service-box">
+        <div class="icon">
+          <i class="fa-solid fa-hand-holding-dollar"></i>
+        </div>
+        <h3>Professional Advice</h3>
+        <p>
+          We analyze your financial goals and provide personalized solutions to
+          help you grow your wealth safely.
+        </p>
+      </div>
+
+      <div class="service-box">
+        <div class="icon">
+          <i class="fa-solid fa-user-check"></i>
+        </div>
+        <h3>Fully Independent</h3>
+        <p>
+          We provide financial advice that is completely independent, ensuring
+          that our guidance is solely in your best interest.
+        </p>
+      </div>
+
+      <div class="service-box">
+        <div class="icon">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+        <h3>Transparent</h3>
+        <p>
+          We provide complete clarity on every financial product, process, and
+          term—no hidden clauses or surprises.
+        </p>
+      </div>
+
+      <div class="service-box">
+        <div class="icon">
+          <i class="fa-solid fa-handshake-angle"></i>
+        </div>
+        <h3>Great Support</h3>
+        <p>
+          We offer tailored support based on your financial needs, ensuring every
+          solution fits you perfectly.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+<!--about-->
+<section class="about-section">
+  <div class="container about-flex">
+
+    <!-- LEFT IMAGE -->
+    <div class="about-img">
+      <img src="https://talerang.com/wp-content/uploads/2018/06/Ace-your-meetings.jpg">
+    </div>
+
+    <!-- RIGHT CONTENT -->
+    <div class="about-content">
+      <h2>Building a Stronger Financial Future</h2>
+
+      <p>
+       Financial goals become easier to achieve when you have the right guidance and support. We help individuals and businesses find the right loan solutions through a clear, reliable, and smooth process. With expert assistance and tailored options, we aim to make borrowing simple so you can move forward with confidence.
+      </p>
+
+      <ul class="about-list">
+        <li>20+ Years of Trusted Exprtise in </li>
+		
+        <li>financial Solutions</li>
+      </ul>
+
+    </div>
+
+  </div>
+</section>
+<!--offer-->
+<section class="offer-section">
+  <div class="container">
+
+    <!-- Header -->
+    <div class="offer-header">
+      <div class="offer-left">
+        <h2>Explore What We Offer</h2>
+      </div>
+
+      <div class="offer-right">
+        <p>
+          
+        </p>
+      </div>
+    </div>
+
+    <!-- Cards -->
+    <div class="offer-grid">
+
+      <!-- Card 1 -->
+      <div class="offer-card">
+        <img src="https://www.bajajhousingfinance.in/documents/37350/7121351/Image+9.jpg/069a2695-128b-0bf1-594a-b725517f74d2?version=1.0&t=1746429653601null&download=true" alt="">
+        <div class="offer-content">
+          <h3>Home Loans</h3>
+          <p>
+            Flexible duration and EMI planning for buying, constructing, or
+            renovating your house.
+          </p>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="offer-card">
+        <img src="https://specials-images.forbesimg.com/imageserve/62727b19dc1908dc2c021596/960x0.jpg" alt="">
+        <div class="offer-content">
+          <h3>Business Loans</h3>
+          <p>
+            Capital support to grow your business, expand operations, or launch
+            new products.
+          </p>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="offer-card">
+        <img src="https://framerusercontent.com/images/Q3BRc5NiOaBUJkh5WTzqTPvZ1Q.webp" alt="">
+        <div class="offer-content">
+          <h3>Education Loans</h3>
+          <p>
+            Low EMI options to support higher education aspirations in India
+            and abroad.
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Button -->
+    <div class="offer-btn">
+      <a href="#">More Services</a>
+    </div>
+
+  </div>
+</section>
+<!--why section-->
+<section class="why-section">
+  <div class="container why-flex">
+
+    <!-- LEFT CONTENT -->
+    <div class="why-left">
+      <h2> Get Expert Loan Guidance</h2>
+
+     
+
+      <p>
+       Your trusted bridge to achieving your financial goals. With 50+ banking partners, we provide access to a wide range of loan solutions from leading nationalized banks, private banks, and NBFCs — all under one roof.
+      </p>
+    </div>
+
+    <!-- RIGHT IMAGE -->
+    <div class="why-center right">
+      <img src="https://www.resurgentindia.com/images/blogs/icons/190864531.png">
+    </div>
+
+  </div>
+</section>
+<!--footer-->
+<footer class="footer">
+  <div class="footer-container">
+
+    <!-- Column 1 -->
+    <div class="footer-col">
+      <h2>Yash Finance Solutions</h2>
+      <p>Your trusted partner for loans and financial growth.</p>
+      <p>+91 88504 29320</p>
+      <p>Malad West, Mumbai</p>
+    </div>
+
+    <!-- Column 2 -->
+    <div class="footer-col">
+      <h3>Pages</h3>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+       
+        <li><a href="#">Our Team</a></li>
+        <li><a href="#">Services</a></li>
+      </ul>
+    </div>
+
+    <!-- Column 3 -->
+    <div class="footer-col">
+      <h3>Support</h3>
+      <ul>
+        <li><a href="#">FAQ</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Terms & Conditions</a></li>
+        <li><a href="#">Disclaimer</a></li>
+      </ul>
+    </div>
+
+    <!-- Column 4 -->
+    <div class="footer-col">
+      <h3>Working Hours</h3>
+      <p>10 AM – 6 PM</p>
+      <p>Monday – Saturday</p>
+      <p> 24/7 Call Support</p>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    © 2026 Yash Finance Solutions. All Rights Reserved.
+  </div>
+</footer>
+</body>
+</html>

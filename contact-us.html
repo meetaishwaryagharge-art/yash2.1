@@ -1,0 +1,496 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Contact Us - Yash Finance Solutions</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+
+/* ================= GLOBAL ================= */
+* {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Montserrat", sans-serif;
+    }
+
+    body {
+      background: #f5f6f8;
+    }
+
+ /* ===== GLOBAL HEADER STYLES ===== */
+.header {
+    background: #ffffff;
+    padding: 0 8%; 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #e5e5e5;
+    height: 100px; 
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo img {
+    height: 80px; 
+    width: auto;
+    display: block;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.nav a {
+    text-decoration: none;
+    color: #2c4b8c;
+    font-size: 16px;
+    font-weight: 700; 
+    transition: 0.3s;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.nav a:hover {
+    color: #ff7a00;
+}
+
+.nav a.contact-link {
+    background: #f4f6fb;
+    padding: 10px 15px;
+    border-radius: 5px;
+    color: #3b58a4;
+}
+
+/* Mobile Responsive */
+@media (max-width: 900px) {
+    .header {
+        padding: 0 20px;
+        height: 80px;
+    }
+    .nav {
+        gap: 15px;
+    }
+    .nav a {
+        font-size: 14px;
+    }
+    .contact-link {
+        display: none; 
+    }
+}
+
+/* ================= HERO ================= */
+.hero{
+    height:450px;
+    background:url("https://images.pexels.com/photos/3184325/pexels-photo-3184325.jpeg") center/cover no-repeat;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    position:relative;
+    color:#fff;
+}
+
+.hero::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,0.5);
+}
+
+.hero div{
+    position:relative;
+}
+
+.hero h1{
+    font-size:42px;
+}
+
+.hero p{
+    margin-top:10px;
+}
+
+/* ================= CONTAINER ================= */
+.container{
+    max-width:1150px;
+    margin:auto;
+    padding:60px 20px;
+}
+
+.contact-info{
+    display:flex;
+    flex-wrap:wrap;
+    gap:30px;
+    margin-bottom:40px;
+}
+
+.info-card{
+    flex:1;
+    min-width:260px;
+    background:#f8fafb;
+    padding:20px;
+    border-radius:10px;
+    box-shadow:0 4px 12px rgba(0,0,0,0.08);
+}
+
+.info-card h3{
+    color:#3b58a4;
+    margin-bottom:10px;
+}
+
+/* FORM */
+form{
+    max-width:700px;
+    margin:auto;
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
+
+input,textarea{
+    padding:12px;
+    border:1px solid #ccc;
+    border-radius:6px;
+    font-size:15px;
+}
+
+button{
+    background:#3b58a4;
+    color:#fff;
+    padding:12px;
+    border:none;
+    border-radius:6px;
+    font-size:16px;
+    cursor:pointer;
+}
+
+button:hover{
+    opacity:0.9;
+    background: orange;
+}
+
+/* ================= FOOTER ================= */
+footer{
+    background:#3b58a4;
+    color:#fff;
+}
+
+.footer-inner{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-between;
+    max-width:1150px;
+    margin:auto;
+    padding:40px 20px;
+    gap:30px;
+}
+
+.footer-inner div{
+    flex:1;
+    min-width:220px;
+}
+
+.footer-inner ul{
+    list-style:none;
+    padding:0;
+}
+
+.footer-inner ul li{
+    margin-bottom:10px;
+}
+
+.footer-inner ul li a{
+    color:#fff;
+    text-decoration:none;
+}
+
+.footer-bottom{
+    text-align:center;
+    padding:15px;
+    font-size:13px;
+    border-top:1px solid rgba(255,255,255,0.2);
+}
+
+/* ================= RESPONSIVE ================= */
+@media(max-width:768px){
+
+    .nav-menu{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    .contact-info{
+        flex-direction:column;
+    }
+
+    .footer-inner{
+        flex-direction:column;
+        text-align:center;
+    }
+}
+
+</style>
+</head>
+
+<body>
+ <header class="header">
+    <div class="logo">
+        <img src="Yash Finance Logo new.webp" alt="Yash Finance Logo">
+    </div>
+    <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="aboutus.html">About Us</a>
+        <a href="services.html">Services</a>
+        
+       <a href="contact-us.html">Contact Us</a>
+    <a href="tel:+918850429320" class="contact-link">
+      <i class="fa-solid fa-phone" style="margin-right: 8px;"></i>+91 88504 29320
+    </a>
+    </nav>
+</header>
+
+
+<!-- ================= HERO ================= -->
+<style>
+.hero {
+    height: 450px;
+    background: url("https://images.pexels.com/photos/3184325/pexels-photo-3184325.jpeg") center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    color: #ffffff;
+}
+
+/* Dark Overlay */
+.hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.65);  /* darker overlay */
+}
+
+/* Keep text above overlay */
+.hero div {
+    position: relative;
+    z-index: 2;
+}
+
+/* 🔥 Main Title */
+.hero h1 {
+    font-size: 46px;
+    font-weight: 700;
+    color: #ffffff;   /* strong white */
+    letter-spacing: 1px;
+}
+
+/* 🔥 Subtitle */
+.hero p {
+    margin-top: 12px;
+    font-size: 18px;
+    font-weight: 500;
+    color: #f5f5f5;   /* soft white */
+}
+
+</style>
+<section class="hero">
+    <div>
+        <h1>Contact Us</h1>
+        <p>We’re here to help you through your financial journey.</p>
+    </div>
+</section>
+
+<!-- ================= CONTACT SECTION ================= -->
+<style>
+form,
+form input,
+form textarea {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15px;
+}
+
+/* Placeholder text */
+form input::placeholder,
+form textarea::placeholder {
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* Button → Montserrat */
+form button {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+/* Optional: if you have form heading */
+.contact-form h2,
+form h2 {
+    font-family: 'Montserrat', sans-serif;
+}
+</style>
+<section class="container">
+
+    <div class="contact-info">
+        <div class="info-card">
+            <h3>Address</h3>
+            <p>Office 839, 8th floor, IJMIMA Corporate Building, Mind Space, Link Road, Malad West, Mumbai - 400064</p>
+        </div>
+
+        <div class="info-card">
+            <h3>Mail Id</h3>
+            <p>yashfinancesolutions@gmail.com</p>
+        </div>
+
+        <div class="info-card">
+            <h3>Phone</h3>
+            <p>+91 98765 43210</p>
+        </div>
+    </div>
+
+    <form>
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <input type="text" placeholder="Subject" required>
+        <textarea rows="6" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+    </form>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<style>
+/*footer*/
+footer {
+    background: #3b58a4;
+    color: #fff;
+    font-family: 'Open Sans', sans-serif; /* Secondary font */
+}
+
+.footer-inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1150px;
+    margin: auto;
+    padding: 40px 20px;
+    gap: 30px;
+}
+
+.footer-inner div {
+    flex: 1;
+    min-width: 220px;
+}
+
+/* Headings Montserrat */
+.footer-inner h3, 
+.footer-inner h4 {
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+/* Text Open Sans */
+.footer-inner p, 
+.footer-inner li {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.footer-inner ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-inner ul li {
+    margin-bottom: 10px;
+}
+
+.footer-inner ul li a {
+    font-family: 'Open Sans', sans-serif;
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-inner ul li a:hover {
+    color: orange;
+}
+
+.footer-bottom {
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    padding: 15px;
+    background: #3b58a4;
+    font-size: 13px;
+    border-top: 1px solid #333;
+}
+
+/* Responsive for smaller screens */
+@media (max-width: 768px) {
+    .footer-inner {
+        flex-direction: column;
+        text-align: center;
+    }
+    .footer-inner div {
+        margin-bottom: 25px;
+    }
+}
+</style>
+
+<!-- Footer -->
+    <footer>
+  <div class="footer-inner">
+    <div>
+      <h3>Yash Finance Solutions</h3>
+      <p>Your trusted partner for loans and financial growth.</p>
+      <p>+91 88504 29320</p>
+      <p> Malad West, Mumbai</p>
+    </div>
+    <div>
+      <h4>Pages</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+       
+        <li><a href="team.html">Our Team</a></li>
+        <li><a href="services.html">Services</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Support</h4>
+      <ul>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Terms & Conditions</a></li>
+        <li><a href="#">Disclaimer</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Working Hours</h4>
+      <p>10 AM – 6 PM</p>
+      <p>Monday – Saturday</p>
+       <p>Response time within 24 hours</p>
+	  <p>once doucuments are recerived </p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    © 2026 Yash Finance Solutions. All Rights Reserved.
+  </div>
+</footer>
+
+</body>
+</html>
